@@ -9,6 +9,6 @@ Route::get('/todos', fn(Request $request): JsonResponse => (new TodoController)-
 
 Route::post('/todos', fn(Request $request): JsonResponse => (new TodoController)->store($request));
 
-Route::put('/todos/{id}', fn(Request $request): JsonResponse => (new TodoController)->update($request));
+Route::put('/todos', fn(Request $request): JsonResponse => (new TodoController)->update($request));
 
 Route::delete('/todos/{id}', fn(Request $request): JsonResponse => (new TodoController)->destroy($request));

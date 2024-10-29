@@ -29,10 +29,11 @@ class TodoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Todo $todo): JsonResponse
+    public function update(Request $request): JsonResponse
     {
         $todos = Todo::find($request->id);
-        $todos->update('id', $todo->id)->update([
+        $todos->update([
+            'id' => $request->id,
             'title' => $request->title,
             'description' => $request->description,
             'completed' => $request->completed,
