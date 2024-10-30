@@ -37,8 +37,6 @@ class TodoController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'completed' => $request->completed,
-            'estimated' => $request->estimated,
-            'current' => $request->current
         ]);
         return response()->json($todos);
     }

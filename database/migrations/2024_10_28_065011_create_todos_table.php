@@ -16,9 +16,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('description');
             $table->boolean('completed');
-            $table->integer('estimated');
-            $table->integer('current');
             $table->timestamps();
+
         });
     }
 

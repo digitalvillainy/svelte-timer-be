@@ -10,7 +10,5 @@ class Todo extends Model
         'title',
         'description',
         'completed',
-        'estimated',
-        'current'
     ];
 }
